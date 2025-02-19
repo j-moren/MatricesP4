@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Metodos {
@@ -17,5 +18,15 @@ public class Metodos {
 
         return matriz;
 
+    }
+    public void llenarMatriz (int[][] matriz){
+        Random rand = new Random(); // Llenar Matriz con Valores Aleatorios entre 0 a 100
+
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                matriz [i][j] = rand.nextInt(101); // Genera Números entre 0 a 100
+                
+            }
+        }
     }
 }
