@@ -41,5 +41,16 @@ public class Metodos {
         }
         return sumasColumnas;
     }    
+    public int columnaconMaximasuma(int[] sumasColumnas) {
+        int maxSuma = sumasColumnas[0]; // Inicializamos con la Primera suma
+        int columnaMaxima = 0; // Inicializamos con la Primera Colunma
 
+        for (int i = 1; i < sumasColumnas.length; i++) {
+            if (sumasColumnas[i] > maxSuma) {
+            maxSuma = sumasColumnas[i]; // Actualizamos la Maxima Suma
+            columnaMaxima = i; // Actualizamos la Columna con la Maxima Suma
+            }
+        }
+        return columnaMaxima;
+    }
 }
