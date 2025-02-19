@@ -1,6 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
-import javax.sound.sampled.SourceDataLine;
+
 
 public class Metodos {
     
@@ -59,5 +59,9 @@ public class Metodos {
         for (int i = 0; i < matriz.length; i++) {
             System.out.println(matriz[i][columnaMaxima]); // Imprimir los elementos de la Columna
         }
+    }
+    public void imprimirSumaColumna(int[] sumasColumnas, int columnaMaxima) {
+        System.out.println("La Suma de la Columna con la máxima suma es: " + sumasColumnas[columnaMaxima]);
+        
     }
 }
