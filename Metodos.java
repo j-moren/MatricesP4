@@ -29,4 +29,17 @@ public class Metodos {
             }
         }
     }
+    public int[] sumarColumnas (int[][] matriz) {
+        int[] sumasColumnas = new int[matriz[0].length]; // Array para almacenar las sumas de las columnas
+
+        for (int j = 0; j < matriz[0].length; j++) {
+            int sumaColumna = 0;
+            for (int i = 0; i < matriz.length; i++) {
+                sumaColumna += matriz[i][j]; // Suma los Elementos de Cada Columna
+            }
+            sumasColumnas[j] = sumaColumna; // Guarda la suma de la Columna en un Array
+        }
+        return sumasColumnas;
+    }    
+
 }
