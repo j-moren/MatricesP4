@@ -1,6 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
+
 public class Metodos {
     
     public int[][] solicitarDimensión() {
@@ -28,5 +29,39 @@ public class Metodos {
                 
             }
         }
+    }
+    public int[] sumarColumnas (int[][] matriz) {
+        int[] sumasColumnas = new int[matriz[0].length]; // Array para almacenar las sumas de las columnas
+
+        for (int j = 0; j < matriz[0].length; j++) {
+            int sumaColumna = 0;
+            for (int i = 0; i < matriz.length; i++) {
+                sumaColumna += matriz[i][j]; // Suma los Elementos de Cada Columna
+            }
+            sumasColumnas[j] = sumaColumna; // Guarda la suma de la Columna en un Array
+        }
+        return sumasColumnas;
+    }    
+    public int columnaconMaximasuma(int[] sumasColumnas) {
+        int maxSuma = sumasColumnas[0]; // Inicializamos con la Primera suma
+        int columnaMaxima = 0; // Inicializamos con la Primera Colunma
+
+        for (int i = 1; i < sumasColumnas.length; i++) {
+            if (sumasColumnas[i] > maxSuma) {
+            maxSuma = sumasColumnas[i]; // Actualizamos la Maxima Suma
+            columnaMaxima = i; // Actualizamos la Columna con la Maxima Suma
+            }
+        }
+        return columnaMaxima;
+    }
+    public void imprimirColumnaConMaximaSuma(int[][] matriz, int columnaMaxima) {
+        System.out.println("Columna con la Máxima suma (columna " + (columnaMaxima +1) + "): ");
+        for (int i = 0; i < matriz.length; i++) {
+            System.out.println(matriz[i][columnaMaxima]); // Imprimir los elementos de la Columna
+        }
+    }
+    public void imprimirSumaColumna(int[] sumasColumnas, int columnaMaxima) {
+        System.out.println("La Suma de la Columna con la máxima suma es: " + sumasColumnas[columnaMaxima]);
+        
     }
 }
